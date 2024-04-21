@@ -1,29 +1,42 @@
-<!-- 暫定ユニコーン  -->
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
 <head>
-  <title>Pokemon</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="theme-color" content="#000000">
-  <script type="text/javascript" src="allPokemon.js"></script>
-  <script type="text/javascript" src="script.js"></script>
-  <style>
-    body {
-      font-family: monospace;
-    }
-  </style>
+  <link rel="stylesheet" type="text/css" href="style.css" />
+  
 </head>
 
 <body>
-  <h1>プログラミング基礎へようこそ！</h1>
-  <h3>Mac をお使いの方は、 <font color="blue"> Cmd + Option + J</font><br>
-    Windows/Linux をお使いの方は、 <font color="blue"> Control+Shift+J</font> <br>
-    をクリックして、デベロッパーツールを開いてください。</h3>
-  <h3>下記にユニコーンの画像が表示されていれば成功です！</h3>
-  <img src="https://cdn.dribbble.com/users/1281272/screenshots/4515441/unicorn.gif">
+  <p><img id="rock-paper-scissors" src="rockPaperScissors.jpg" width="400px" height="400px"></p>
+  
+
+
+  <div class="rps">
+    <!-- <button id="rock" onclick="PlayRockPaperScissors(0);"> ✊</button>
+    <button id="scissors" onclick="PlayRockPaperScissors(1);"> ✌️</button>
+    <button id="paper" onclick="PlayRockPaperScissors(2);"> 🖐️</button> -->
+    <input type="radio" id="0" name="rps" onclick="PlayRockPaperScissors(0);rockAudio()"><label for="0">✊</label>
+    <input type="radio" id="1" name="rps" onclick="PlayRockPaperScissors(1);scissorsAudio()"><label for="1">✌️</label>
+    <input type="radio" id="2" name="rps" onclick="PlayRockPaperScissors(2);paperAudio()"><label for="2">🖐️</label>
+    <button name="start" id="start">START</button>
+    <audio id="start-audio">
+      <source src="じゃんけん...mp3" type="audio/mp3">
+    </audio>
+   <audio id="rock-audio">
+      <source src="グー.mp3" type="audio/mp3">
+    </audio>
+    <audio id="scissors-audio">
+      <source src="チョキ.mp3" type="audio/mp3">
+    </audio>
+    <audio id="paper-audio">
+      <source src="パー.mp3" type="audio/mp3">
+    </audio>
+  </div>
+  <button id="rps-result"> </button>
+  <script type="text/javascript" src="script.js"></script>
 </body>
 
 </html>
