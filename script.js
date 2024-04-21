@@ -66,3 +66,9 @@ function PlayRockPaperScissors(playerRockPaperScissors){
 
     document.getElementById("start").addEventListener("click", startAction);
   
+
+// 追加したい仕様
+// １.コインを入れる
+// ２.じゃんけん後勝ったら、コインがもらえる倍率を決める
+// ３.獲得したコインが増える
+// ４.他のコインゲーム作って同じコインで使えるようにする
